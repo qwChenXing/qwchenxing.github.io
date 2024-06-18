@@ -19,6 +19,3 @@ hide:
 <body class="specific-page">
 
 </body>
-<footer class="my-footer">
-    <!-- footer内容 -->
-</footer>
