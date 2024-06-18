@@ -1,4 +1,5 @@
 site_name: Astral Wiki
+site_url: https://qwchenxing.github.io
 nav:
     - 主页: "index.md"
     - 搭建指南-星骰: 
