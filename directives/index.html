@@ -1,0 +1,3550 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://qwchenxing.github.io/directives/">
+      
+      
+        <link rel="prev" href="../function/">
+      
+      
+        <link rel="next" href="../load/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+    
+    
+      
+        <title>基础指令 - Astral Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="Astral Wiki" class="md-header__button md-logo" aria-label="Astral Wiki" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Astral Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              基础指令
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  主页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../1/" class="md-tabs__link">
+          
+  
+  搭建指南-星骰
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../function/" class="md-tabs__link">
+          
+  
+  基础功能-星骰
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../draw/" class="md-tabs__link">
+          
+  
+  进阶功能-星骰
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../special-functions/" class="md-tabs__link">
+          
+  
+  非文本相关
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../MT/" class="md-tabs__link">
+          
+  
+  其他教程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../api/" class="md-tabs__link">
+          
+  
+  API
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://astral.snoweven.com/" class="md-tabs__link">
+        
+  
+    
+  
+  论坛
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Astral Wiki" class="md-nav__button md-logo" aria-label="Astral Wiki" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    Astral Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    主页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    搭建指南-星骰
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            搭建指南-星骰
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    前言
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基础搭建（手机）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    基础功能-星骰
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            基础功能-星骰
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基础功能
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    基础指令
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    基础指令
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      【指令智能纠错表】
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#master" class="md-nav__link">
+    <span class="md-ellipsis">
+      【Master模式】
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="【Master模式】">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#master_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Master绑定/解绑
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      【控制台控制指令】
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="【控制台控制指令】">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      刷屏反制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      无法无天模式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据备份
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      黑名单操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      admin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      群开关操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      心跳包设定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      远程进程管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    <span class="md-ellipsis">
+      远程管理help文档内容
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      入群新人欢迎语
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      关键词自动回复
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      长消息分条发送
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      手动清群
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      恢复数据
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      【跑团指令】
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="【跑团指令】">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      小队管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      人物卡管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      人物卡属性设定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      房规管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      跑团骰点鉴定
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="跑团骰点鉴定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coc" class="md-nav__link">
+    <span class="md-ellipsis">
+      COC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="COC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      普通鉴定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      奖励骰鉴定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      惩罚骰鉴定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      对抗骰鉴定
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    <span class="md-ellipsis">
+      r表达式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    <span class="md-ellipsis">
+      range表达式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dnd" class="md-nav__link">
+    <span class="md-ellipsis">
+      DND
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DND">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      先攻骰点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      先攻列表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      先攻清空
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      先攻设定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      先攻删除
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buff" class="md-nav__link">
+    <span class="md-ellipsis">
+      先攻buff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      先攻回合结束
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      无限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      圣杯
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kp" class="md-nav__link">
+    <span class="md-ellipsis">
+      超级暗骰(KP专用)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sc" class="md-nav__link">
+    <span class="md-ellipsis">
+      理智鉴定SC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      技能升级鉴定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      技能升级鉴定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      设置人物卡名字
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      人物作成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      名字生成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      暗骰
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      随机分配身份
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      跑团名片修改
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      默认骰面设定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      牌堆功能
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ob" class="md-nav__link">
+    <span class="md-ellipsis">
+      OB围观
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OB围观">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obexitlistclronoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      旁观模式:ob(exit/list/clr/on/off)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      【功能指令】
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="【功能指令】">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      退群
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      跑团日志
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      骰点统计
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      规则书速查
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#master_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取master信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      关于内核
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      读取内核版本号
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../load/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    文件载入
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    自定义帮助
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    进阶功能-星骰
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            进阶功能-星骰
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../draw/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    牌堆
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基础自定义（回雪）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js-lua/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    进阶自定义（JS和LUA）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    房规
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mirai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mirai码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    非文本相关
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            非文本相关
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../special-functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    特殊函数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mirai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mirai码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CQ码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    其他教程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            其他教程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MT管理器教学
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../askingarts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    提问的艺术
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Astral论坛相关API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../astralapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    星骰api
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://astral.snoweven.com/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    论坛
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      【指令智能纠错表】
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#master" class="md-nav__link">
+    <span class="md-ellipsis">
+      【Master模式】
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="【Master模式】">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#master_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Master绑定/解绑
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      【控制台控制指令】
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="【控制台控制指令】">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      刷屏反制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      无法无天模式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据备份
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      黑名单操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      admin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      群开关操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      心跳包设定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      远程进程管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    <span class="md-ellipsis">
+      远程管理help文档内容
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      入群新人欢迎语
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      关键词自动回复
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      长消息分条发送
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      手动清群
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      恢复数据
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      【跑团指令】
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="【跑团指令】">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      小队管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      人物卡管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      人物卡属性设定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      房规管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      跑团骰点鉴定
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="跑团骰点鉴定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coc" class="md-nav__link">
+    <span class="md-ellipsis">
+      COC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="COC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      普通鉴定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      奖励骰鉴定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      惩罚骰鉴定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      对抗骰鉴定
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    <span class="md-ellipsis">
+      r表达式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    <span class="md-ellipsis">
+      range表达式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dnd" class="md-nav__link">
+    <span class="md-ellipsis">
+      DND
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DND">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      先攻骰点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      先攻列表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      先攻清空
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      先攻设定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      先攻删除
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buff" class="md-nav__link">
+    <span class="md-ellipsis">
+      先攻buff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      先攻回合结束
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      无限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      圣杯
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kp" class="md-nav__link">
+    <span class="md-ellipsis">
+      超级暗骰(KP专用)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sc" class="md-nav__link">
+    <span class="md-ellipsis">
+      理智鉴定SC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      技能升级鉴定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      技能升级鉴定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      设置人物卡名字
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      人物作成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      名字生成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      暗骰
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      随机分配身份
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      跑团名片修改
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      默认骰面设定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      牌堆功能
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ob" class="md-nav__link">
+    <span class="md-ellipsis">
+      OB围观
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OB围观">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obexitlistclronoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      旁观模式:ob(exit/list/clr/on/off)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      【功能指令】
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="【功能指令】">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      退群
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      跑团日志
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      骰点统计
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      规则书速查
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#master_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取master信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      关于内核
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      读取内核版本号
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">骰娘指令集<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">【指令智能纠错表】<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>鉴于有些人使用其他骰系的指令，或者指令不标准，为了容错做了有限的指令重定向</p>
+<table>
+<thead>
+<tr>
+<th>指令解释</th>
+<th>被重定向的指令</th>
+<th>重定向到的指令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>牌堆列表</td>
+<td>help draw</td>
+<td>draw help</td>
+</tr>
+<tr>
+<td>结束并上传log</td>
+<td>log get</td>
+<td>log end</td>
+</tr>
+<tr>
+<td>暗中鉴定</td>
+<td>hl</td>
+<td>rah</td>
+</tr>
+<tr>
+<td>错误的骰点指令</td>
+<td>r 理由 表达式</td>
+<td>r 表达式 理由</td>
+</tr>
+<tr>
+<td>错误的鉴定指令</td>
+<td>ra 数值 技能</td>
+<td>ra 技能 数值</td>
+</tr>
+<tr>
+<td></td>
+<td>rc 数值 技能</td>
+<td>rc 技能 数值</td>
+</tr>
+<tr>
+<td></td>
+<td>rp鉴定次数#骰数 技能 数值</td>
+<td>ra 鉴定次数#p骰数 技能 数值</td>
+</tr>
+<tr>
+<td></td>
+<td>rb鉴定次数#骰数 技能 数值</td>
+<td>ra 鉴定次数#b骰数 技能 数值</td>
+</tr>
+<tr>
+<td></td>
+<td>rp大于惩罚骰最大值的数值</td>
+<td>rap 大于惩罚骰最大值的数值</td>
+</tr>
+<tr>
+<td></td>
+<td>rb大于奖励骰最大值的数值</td>
+<td>rab 大于奖励骰最大值的数值</td>
+</tr>
+<tr>
+<td>昵称显示指令</td>
+<td>nn show</td>
+<td>pc show</td>
+</tr>
+<tr>
+<td></td>
+<td>st show</td>
+<td>pc show</td>
+</tr>
+<tr>
+<td>角色卡重命名</td>
+<td>st rename</td>
+<td>nn</td>
+</tr>
+<tr>
+<td>角色卡删除</td>
+<td>st rm</td>
+<td>pc del</td>
+</tr>
+<tr>
+<td></td>
+<td>del</td>
+<td>pc del</td>
+</tr>
+<tr>
+<td>牌堆重新加载</td>
+<td>draw reload</td>
+<td>system reload</td>
+</tr>
+<tr>
+<td>系统信息查看</td>
+<td>system state</td>
+<td>runtime</td>
+</tr>
+<tr>
+<td>群管指令</td>
+<td>group+停用指令</td>
+<td>bot off</td>
+</tr>
+<tr>
+<td></td>
+<td>group-停用指令</td>
+<td>bot on</td>
+</tr>
+<tr>
+<td></td>
+<td>group+禁用回复</td>
+<td>reply off this</td>
+</tr>
+<tr>
+<td></td>
+<td>group-禁用回复</td>
+<td>reply on this</td>
+</tr>
+<tr>
+<td></td>
+<td>group+禁用ob</td>
+<td>ob off</td>
+</tr>
+<tr>
+<td></td>
+<td>group-禁用ob</td>
+<td>ob on</td>
+</tr>
+<tr>
+<td>技能操作</td>
+<td>hp 参数</td>
+<td>st hp 参数</td>
+</tr>
+<tr>
+<td></td>
+<td>san 参数</td>
+<td>st san 参数</td>
+</tr>
+<tr>
+<td></td>
+<td>mp 参数</td>
+<td>st mp 参数</td>
+</tr>
+<tr>
+<td></td>
+<td>sp 参数</td>
+<td>st sp 参数</td>
+</tr>
+<tr>
+<td></td>
+<td>hp</td>
+<td>st show hp</td>
+</tr>
+<tr>
+<td></td>
+<td>san</td>
+<td>st show san</td>
+</tr>
+<tr>
+<td></td>
+<td>mp</td>
+<td>st show mp</td>
+</tr>
+<tr>
+<td></td>
+<td>sp</td>
+<td>st show sp</td>
+</tr>
+</tbody>
+</table>
+<h2 id="master">【Master模式】<a class="headerlink" href="#master" title="Permanent link">&para;</a></h2>
+<h3 id="master_1">Master绑定/解绑<a class="headerlink" href="#master_1" title="Permanent link">&para;</a></h3>
+<p>找到“骰基本信息-骰主QQ"实项，写入QQ号即可，一行一个即可绑定，</p>
+<p>删除指定行master即可解绑</p>
+<h2 id="_3">【控制台控制指令】<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">刷屏反制<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>guard <font color=#53b0ff>设置一定时间内只响应每人每群一定数量的消息</font></p>
+</li>
+<li>
+<p>guard during 秒  <font color=#53b0ff>在一定秒数内</font></p>
+</li>
+<li>
+<p>guard times  <font color=#53b0ff>消息数量 每人只回复一定的数量消息</font></p>
+</li>
+<li>
+<p>guard spam off/on <font color=#53b0ff>设置是否启用刷屏反制 </font></p>
+</li>
+<li>
+<p>guard warning 语句  <font color=#53b0ff>自定义警告语句</font></p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>要master权限</p>
+</div>
+<h3 id="_5">无法无天模式<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>NoLawNoSky on <font color=#53b0ff>进入无法无天模式，开启后骰娘被踢被禁言将不会拉黑对方。</font></p>
+</li>
+<li>
+<p>NoLawNoSky off <font color=#53b0ff>退出无法无天模式</font></p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>要master权限</p>
+</div>
+<h3 id="_6">数据备份<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>backup  <font color=#53b0ff>查看帮助</font></p>
+</li>
+<li>
+<p>backup auto on/off  <font color=#53b0ff>打开或关闭自动备份</font></p>
+</li>
+<li>
+<p>backup recovery[文件名]<font color=#53b0ff>恢复此备份</font></p>
+</li>
+<li>
+<p>backup make <font color=#53b0ff>生成一个data目录的备份，保存至/backup  </font></p>
+</li>
+<li>
+<p>backup list <font color=#53b0ff>枚举备份，也就是backup目录下的内容 </font></p>
+</li>
+<li>
+<p>backup del[欲要删除的文件名] <font color=#53b0ff>删除指定备份</font></p>
+</li>
+<li>
+<p>backup 30day<font color=#53b0ff> 30天前的备份</font></p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>要master权限</p>
+</div>
+<h3 id="_7">黑名单操作<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>black <font color=#53b0ff> 查看帮助</font></p>
+</li>
+<li>
+<p>black add user[QQ][理由]<font color=#53b0ff>拉黑一个用户</font></p>
+</li>
+<li>
+<p>blackrm【全球编码】<font color=#53b0ff> 解黑</font></p>
+</li>
+<li>
+<p>black detail[全球编码]<font color=#53b0ff>详细的黑名单信息</font></p>
+</li>
+<li>
+<p>black count <font color=#53b0ff>统计黑名单总数</font></p>
+</li>
+<li>
+<p>black fnd<font color=#53b0ff>群号/QQ查找里名单信息</font></p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>要master权限</p>
+</div>
+<div class="admonition none">
+<p class="admonition-title">若要解黑</p>
+<p>1.需要先**black fnd 群号/QQ** 查找相关黑名单信息，获得全球编码**(uuid)<strong>，如**AAAA-BBBB-CCCC-DDDD-ABCDE</strong>，然后进行解黑</p>
+<p>2.发送 <strong>black mm AAAA-BBBB-CCCC-DDDD-ABCDE</strong></p>
+</div>
+<div class="admonition none">
+<p class="admonition-title">若要手动拉黑</p>
+<p>发送**black add user 1234567** 这人太丑了</p>
+<p>即可以“这人太丑了"为理由拉黑QQ号“1234567”，如果要拉黑群则把user换成group</p>
+</div>
+<h3 id="admin">admin<a class="headerlink" href="#admin" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>admin state <font color=#53b0ff>当前状态说明</font></p>
+</li>
+<li>
+<p>admin black qq (-) 理由 号 <font color=#53b0ff>拉黑用户（black指令兼容版）</font></p>
+</li>
+<li>
+<p>admin black group (-) 理由 群 <font color=#53b0ff>拉黑群聊（black指令兼容版）</font></p>
+</li>
+</ul>
+<h3 id="_8">群开关操作<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>group<font color=#53b0ff> 显示帮助</font></p>
+</li>
+<li>
+<p>group card[用户QQ][名片] <font color=#53b0ff>设置群员名片</font></p>
+</li>
+<li>
+<p>group &plusmn;[群管词条] <font color=#53b0ff>为群加减设置(例: group +禁用回复 关闭本群自定义回复)</font></p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>需要Master权限 或 管理员权限</p>
+</div>
+<div class="admonition none">
+<p class="admonition-title">群管词条</p>
+<p>停用指令/禁用回复/禁用jrrp/禁用draw/禁用help/禁用ob</p>
+</div>
+<h3 id="_9">心跳包设定<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>heartbeat<font color=#53b0ff> 显示帮助</font></p>
+</li>
+<li>
+<p>heartbeat address[地址]<font color=#53b0ff>设置心跳包地址</font></p>
+</li>
+<li>
+<p>heartbeat token [token]<font color=#53b0ff>设置心跳包token</font></p>
+</li>
+<li>
+<p>heartbeat on <font color=#53b0ff>开启心跳包</font></p>
+</li>
+<li>
+<p>heartbeat off <font color=#53b0ff>关闭心跳包</font></p>
+</li>
+<li>
+<p>heartbeat status <font color=#53b0ff>心跳包日志</font></p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>需要Master权限</p>
+</div>
+<div class="admonition none">
+<p class="admonition-title">*群管词条</p>
+<p>默认使用仑质心跳服务，若默认，则无需设定心跳包地址</p>
+<p>若默认，token需要去<a href="http://benzencloudhk.xyz/index.php/dicetoken/">OlivaOS心跳服务</a>领取，并找仑质审核，然后使用**heartbeat token[这里写你申请到的token]**</p>
+<p><strong>heartbeat on</strong> 后本系统才会自动发送心跳包</p>
+</div>
+<h3 id="_10">远程进程管理<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>system <font color=#53b0ff>显示帮助</font></p>
+</li>
+<li>
+<p>system save <font color=#53b0ff>手动保存数据</font></p>
+</li>
+<li>
+<p>system load <font color=#53b0ff>重新加载所有数据(牌堆，自定义文件等)</font></p>
+</li>
+<li>
+<p>system reload <font color=#53b0ff>重启骰娘内核(慎用，会中断服务高达1分钟)</font></p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>需要Master权限</p>
+</div>
+<h3 id="help">远程管理help文档内容<a class="headerlink" href="#help" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>helpdoc <font color=#53b0ff> 帮助</font></p>
+</li>
+<li>
+<p>helpdoc [词条名][词条内容]<font color=#53b0ff>自定义帮助词条词条内容，以&amp;开头表示重定向。</font></p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>需要Master权限</p>
+<p>也可以手动放入相关文件到helpdoc文件夹内</p>
+</div>
+<details class="none">
+<summary>例子</summary>
+<p>如**.helpdoc追仙子&amp;追仙**后</p>
+<p><strong>help追仙子</strong> 将重定向到 <strong>追仙后</strong></p>
+</details>
+<h3 id="_11">入群新人欢迎语<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>welcome <font color=#53b0ff>帮助</font></p>
+</li>
+<li>
+<p>welcome on <font color=#53b0ff>打开</font></p>
+</li>
+<li>
+<p>welcome off <font color=#53b0ff>关闭</font></p>
+</li>
+<li>
+<p>welcome[自定义语句内容]<font color=#53b0ff>设定欢迎语内容</font></p>
+</li>
+</ul>
+<h3 id="_12">关键词自动回复<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>reply on/off this <font color=#53b0ff>开关本群自动回复</font></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>需要管理员权限</p>
+</div>
+<ul>
+<li>
+<p>reply 全匹配关键词 内容 添加关键词<font color=#53b0ff>自动回复项目</font></p>
+</li>
+<li>
+<p>reply list <font color=#53b0ff>查看所有设定的关键词</font></p>
+</li>
+<li>
+<p>reply on/off <font color=#53b0ff>开关全局自动回回复</font></p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>需要master权限</p>
+</div>
+<h3 id="_13">长消息分条发送<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>system split on/off <font color=#53b0ff>是否打开长消息自动分条发送</font></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>需要master权限</p>
+</div>
+<h3 id="_14">手动清群<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>master groupclr count 数字(留空默认30)<font color=#53b0ff>查看 数字 天内未使用的群聊数量</font></p>
+</li>
+<li>
+<p>master groupclr 数字 <font color=#53b0ff>退出 数字 天内未使用的群聊</font></p>
+</li>
+</ul>
+<h3 id="_15">恢复数据<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>recovery <font color=#53b0ff>帮助</font></p>
+</li>
+<li>
+<p>recovery overwrite QQ <font color=#53b0ff>恢复数据</font></p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>需要提前用要恢复的骰子的data文件夹覆盖现在的data文件夹</p>
+</div>
+<h2 id="_16">【跑团指令】<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<h3 id="_17">小队管理<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>team <font color=#53b0ff>列出小队成员</font></p>
+</li>
+<li>
+<p>team help <font color=#53b0ff>帮助</font></p>
+</li>
+<li>
+<p>team set <font color=#53b0ff>添加小队成员</font></p>
+</li>
+</ul>
+<details class="none">
+<summary>例子</summary>
+<ul>
+<li>team set @某人   </li>
+<li>team set 某人QQ</li>
+</ul>
+</details>
+<ul>
+<li>team hp 修改队员血量<font color=#53b0ff></font></li>
+</ul>
+<details class="none">
+<summary>例子</summary>
+<ul>
+<li>team hp @成员 +3(成员恢复3血)</li>
+<li>team hp @成员 3(成员失去3血)</li>
+<li>team hp @成员 +1d3(成员恢复1d3血)</li>
+<li>team hp @成员 1d3(成员失去1d3血)</li>
+<li>team hp all 1d3(全体成员失去1d3血)</li>
+<li>team hp all +1d3(全体成员获得1d3血)</li>
+</ul>
+</details>
+<ul>
+<li>team san <font color=#53b0ff>修改队员san</font></li>
+</ul>
+<details class="none">
+<summary>例子</summary>
+<ul>
+<li>team san @成员 +3(成员恢复3理智)</li>
+<li>team san @成员 3(成员失去3理智)</li>
+<li>team san @成员 +1d3(成员恢复1d3理智)</li>
+<li>team san @成员 1d3(成员失去1d3理智)</li>
+<li>team san @成员 1d3/1d5(成员进行sc 1d3/1d5)</li>
+<li>team san all 1d3/1d5(全体成员进行sc 1d3/1d5)</li>
+<li>team san all 1d3(全体成员失去1d3理智)</li>
+<li>team san all +1d3(全体成员获得1d3理智)</li>
+</ul>
+</details>
+<ul>
+<li>team rm <font color=#53b0ff>删除队员</font></li>
+</ul>
+<details class="none">
+<summary>例子</summary>
+<ul>
+<li>team rm @成员</li>
+</ul>
+</details>
+<ul>
+<li>
+<p>team rename <font color=#53b0ff>修改全体群名片为跑团格式</font></p>
+</li>
+<li>
+<p>team clr <font color=#53b0ff>清除所有队员</font></p>
+</li>
+<li>
+<p>team call <font color=#53b0ff>艾特所有队员</font></p>
+</li>
+<li>
+<p>team lock<font color=#53b0ff>锁定小队，小队人物卡不会因其他命令被切换</font></p>
+</li>
+<li>
+<p>team unlock <font color=#53b0ff>解锁小队</font></p>
+</li>
+<li>
+<p>team desc <font color=#53b0ff>私聊小队成员信息</font></p>
+</li>
+<li>
+<p>team en <font color=#53b0ff>统计技能成功情况(注:只有team lock状态才能统计!)</font></p>
+</li>
+</ul>
+<h3 id="_18">人物卡管理<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>pc 显示帮助<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>pc new [卡名]完全省略参数将生成一张C0C7模板的随机姓名卡<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>pc tag[卡名]为当前群绑定指定卡,为空则解绑使用默认卡,所有群默认使用跨群卡，绑定后使用本群卡<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>pc show [卡名]展示指定卡所有记录的属性，为空则展示当前卡<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>pc cpy [卡名1][卡名2]将后者属性复制给前者<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>pc list 列出全部角色卡<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>pc grp 列出各群绑定卡<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>pc build[卡名]根据模板填充生成属性<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>pc redo [卡名] 清空原有属性后重新生成<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>pc clr 销毁全部角色卡记录<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>pc nn [新卡名] 重命名当前卡，不允许重名<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>pc del[卡名]删除指定卡,留空参数解绑并删除当前卡<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>pc online [卡名] 设为云人物卡，避免覆盖<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>pc push [卡名]设为云人物卡并覆盖云数据<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>pc pull [卡名] 设为云人物卡并覆盖本地数据<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>pc offine [卡名]解除云人物卡<font color=#53b0ff></font></p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>每名用户保存的角色卡最多为10</p>
+</div>
+<h3 id="_19">人物卡属性设定<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>st帮助<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>st del[欲删除的技能名]删除技能<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>st clr 初始化所有技能<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>st名字-属性10属性20录卡(塔系格式)<font color=#53b0ff></font></p>
+</li>
+<li>
+<p>st属性10属性20录卡(溯洄格式)<font color=#53b0ff></font></p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>关于人物卡的显示，操作请使用。pc 命令查看帮助。</p>
+</div>
+<h3 id="_20">房规管理<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p>setcoc [房规代码0-5or自定义房规名称]<font color=#53b0ff>(默认为3)</font></p>
+<div class="admonition none">
+<p class="admonition-title">代码0</p>
+<ul>
+<li>出1大成功</li>
+<li>不满50出96-100大失败</li>
+<li>满50出100大失败</li>
+</ul>
+</div>
+<div class="admonition none">
+<p class="admonition-title">代码1</p>
+<ul>
+<li>不满50出1大成功，满50出1-5大成功</li>
+<li>不满50出96-100大失败，满50出100大失败</li>
+</ul>
+</div>
+<div class="admonition none">
+<p class="admonition-title">代码2</p>
+<ul>
+<li>出1-5且&lt;=成功率大成功</li>
+<li>出100或出96-99且&gt;成功率大失败</li>
+</ul>
+</div>
+<div class="admonition none">
+<p class="admonition-title">代码3</p>
+<ul>
+<li>出1-5大成功</li>
+<li>出96-100大失败</li>
+</ul>
+</div>
+<div class="admonition none">
+<p class="admonition-title">代码4</p>
+<ul>
+<li>出1-5且&lt;=十分之一大成功</li>
+<li>不满50出&gt;= 96 +十分之一大失败，满50出100大失败</li>
+</ul>
+</div>
+<div class="admonition none">
+<p class="admonition-title">代码5</p>
+<ul>
+<li>出1-2且&lt;五分之一大成功</li>
+<li>不满50出96-100大失败，满50出99-100大失败</li>
+</ul>
+</div>
+<div class="admonition none">
+<p class="admonition-title">自定义房规名称</p>
+<ul>
+<li>顾名思义</li>
+<li>详情参考<a href="../rules/">房规</a></li>
+</ul>
+</div>
+<h3 id="_21">跑团骰点鉴定<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<h4 id="coc">COC<a class="headerlink" href="#coc" title="Permanent link">&para;</a></h4>
+<h5 id="_22">普通鉴定<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h5>
+<div class="admonition none">
+<p class="admonition-title">房规规则</p>
+<ul>
+<li>ra技能名 属性值</li>
+<li>ra多重鉴定次数#属性名 属性值 <font color=#53b0ff>(例ra2#斗殴50)</font></li>
+</ul>
+</div>
+<div class="admonition none">
+<p class="admonition-title">标准规则</p>
+<ul>
+<li>rc技能名 属性值</li>
+<li>rc多重鉴定次数# 属性值 <font color=#53b0ff>(例rc2#斗殴50)</font></li>
+</ul>
+</div>
+<h5 id="_23">奖励骰鉴定<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h5>
+<div class="admonition none">
+<p class="admonition-title">房规规则</p>
+<ul>
+<li>rab技能名 属性值</li>
+<li>ra多重鉴定次数#b奖励骰个数 技能名 属性值 <font color=#53b0ff>(例ra2#b3斗殴50)</font></li>
+</ul>
+</div>
+<div class="admonition none">
+<p class="admonition-title">标准规则</p>
+<ul>
+<li>rcb技能名 属性值</li>
+<li>rc多重鉴定次数#b奖励骰个数 技能名 属性值 <font color=#53b0ff>(例rc2#b3斗殴50)</font></li>
+</ul>
+</div>
+<h5 id="_24">惩罚骰鉴定<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h5>
+<div class="admonition none">
+<p class="admonition-title">房规规则</p>
+<ul>
+<li>rap技能名 属性值</li>
+<li>ra多重鉴定次数#p惩罚骰个数 技能名 属性值 <font color=#53b0ff>(例ra2#p3斗殴50)</font></li>
+</ul>
+</div>
+<div class="admonition none">
+<p class="admonition-title">标准规则</p>
+<ul>
+<li>rcb技能名 属性值</li>
+<li>rc多重鉴定次数#p惩罚骰个数 技能名 属性值 <font color=#53b0ff>(例rc2#p3斗殴50)</font></li>
+</ul>
+</div>
+<h5 id="_25">对抗骰鉴定<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h5>
+<div class="admonition none">
+<p class="admonition-title">房规规则</p>
+<ul>
+<li>rav技能名/数值 <font color=#53b0ff>(例rav 50或rav斗殴 或rav角色:斗殴)</font></li>
+</ul>
+</div>
+<div class="admonition none">
+<p class="admonition-title">标准规则</p>
+<ul>
+<li>rcv技能名/数值 <font color=#53b0ff>(例rcv 50或rcv斗殴 或rcv角色:斗殴)</font></li>
+</ul>
+<div class="admonition none">
+<p class="admonition-title">注意</p>
+<p>其中属性值在录入属性后可以被省略，技能名可以在有属性值的情况下被省略</p>
+</div>
+</div>
+<h4 id="r">r表达式<a class="headerlink" href="#r" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>支持:XdY、dY、Xd</p>
+</li>
+<li>
+<p>X是骰数默认为1，Y是随机数最大值默认为100</p>
+</li>
+<li>
+<p>XdYkN表取前N个最大数相加</p>
+</li>
+<li>
+<p>XdYqN表取前N个最小数相加</p>
+</li>
+</ul>
+<h4 id="range">range表达式<a class="headerlink" href="#range" title="Permanent link">&para;</a></h4>
+<ul>
+<li>详细版r表达式</li>
+</ul>
+<h4 id="dnd">DND<a class="headerlink" href="#dnd" title="Permanent link">&para;</a></h4>
+<h5 id="_26">先攻骰点<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h5>
+<ul>
+<li>ri 加值 名字</li>
+</ul>
+<div class="admonition none">
+<p class="admonition-title">注意</p>
+<p>其中加值和名字可以省略</p>
+</div>
+<details class="none">
+<summary>例子</summary>
+<ul>
+<li>ri(投掷先攻)</li>
+<li>ri +3(投掷加值为3的先攻)</li>
+<li>ri a(为a投掷先攻)</li>
+<li>ri 3#a(分别为aA、aB、aC投掷先攻)</li>
+</ul>
+</details>
+<h5 id="_27">先攻列表<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h5>
+<ul>
+<li>init</li>
+</ul>
+<h5 id="_28">先攻清空<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h5>
+<ul>
+<li>init clr</li>
+</ul>
+<h5 id="_29">先攻设定<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h5>
+<ul>
+<li>init set 设置名 表达式</li>
+</ul>
+<h5 id="_30">先攻删除<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h5>
+<ul>
+<li>init del 关键词</li>
+</ul>
+<h5 id="buff">先攻buff<a class="headerlink" href="#buff" title="Permanent link">&para;</a></h5>
+<ul>
+<li>init buff 关键词 状态名</li>
+</ul>
+<h5 id="_31">先攻回合结束<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h5>
+<ul>
+<li>init end</li>
+</ul>
+<h4 id="_32">无限<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ww XaYkZ</li>
+</ul>
+<div class="admonition none">
+<p class="admonition-title">注意</p>
+<p>X是骰数，Y是成功线，Z是加骰线，其中kZ可以省略，Z默认是8</p>
+</div>
+<h4 id="_33">圣杯<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h4>
+<ul>
+<li>rXdf</li>
+<li>rf</li>
+</ul>
+<div class="admonition none">
+<p class="admonition-title">注意</p>
+<p>X默认是4，骰出X个1到-1的随机数求和。</p>
+</div>
+<h3 id="kp">超级暗骰(KP专用)<a class="headerlink" href="#kp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>psy @玩家 技能名称(留空默认心理学)</li>
+</ul>
+<div class="admonition none">
+<p class="admonition-title">注意</p>
+<ul>
+<li>功能:指定玩家的心理学或其他技能的鉴定结果私聊发送给命令使用者</li>
+</ul>
+<p><font color=#d97400>例:psy @克里斯(结果:将玩家克里斯的心理学鉴定结果私聊给发送psy指令的人)</font></p>
+<p><font color=#d97400>例:psy @克里斯 魅惑 (结果:将玩家克里斯的魅惑鉴定结果私聊给发送psy指令的人)</font></p>
+</div>
+<h3 id="sc">理智鉴定SC<a class="headerlink" href="#sc" title="Permanent link">&para;</a></h3>
+<p><font color=#d97400>理智鉴定，成功时减去成功表达式的理智，失败时减去失败表达式的理智</font></p>
+<p>sc 成功表达式/失败表达式</p>
+<details class="none">
+<summary>例子</summary>
+<ul>
+<li>sc 1d4/3d8</li>
+<li>sc 1/1d10</li>
+</ul>
+</details>
+<h3 id="_34">技能升级鉴定<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>en 技能名</p>
+</li>
+<li>
+<p>en 属性值</p>
+</li>
+<li>
+<p>en 技能名 属性值</p>
+</li>
+</ul>
+<div class="admonition none">
+<p class="admonition-title">注意</p>
+<p>成功后技能将增加1d10</p>
+<p>支持en扩展</p>
+</div>
+<ul>
+<li>en 幸运 属性值 失败时增加/成功时增加</li>
+</ul>
+<details class="none">
+<summary>例子</summary>
+<ul>
+<li>en 幸运 +1d3/1d10，失败时幸运增加1d3，成功幸运增加1d10</li>
+<li>en 幸运 50 -1d3/1d10 ，失败时幸运变成50-1d3，成功幸运变成50+1d10</li>
+</ul>
+</details>
+<h3 id="_35">技能升级鉴定<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>ii <font color=#53b0ff>总结症状</font></p>
+</li>
+<li>
+<p>ti <font color=#53b0ff>临时症状</font></p>
+</li>
+</ul>
+<h3 id="_36">设置人物卡名字<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h3>
+<ul>
+<li>nn <font color=#53b0ff>人物卡名字</font></li>
+</ul>
+<div class="admonition none">
+<p class="admonition-title">注意</p>
+<p>若人物卡存在，则切换到此人物卡，若不存在，则修改名字到此人物卡</p>
+</div>
+<h3 id="_37">人物作成<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>dnd <font color=#53b0ff>数字 生成dnd人物作成</font></p>
+</li>
+<li>
+<p>coc <font color=#53b0ff>数字 生成coc人物作成</font></p>
+</li>
+</ul>
+<h3 id="_38">名字生成<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>name <font color=#53b0ff>生成随机人物名</font></p>
+</li>
+<li>
+<p>namejp <font color=#53b0ff>生成人物名(日)</font></p>
+</li>
+<li>
+<p>name cn <font color=#53b0ff>生成人物名(中)</font></p>
+</li>
+<li>
+<p>name en <font color=#53b0ff>生成人物名(欧)</font></p>
+</li>
+<li>
+<p>name encn <font color=#53b0ff>生成人物名(中欧)</font></p>
+</li>
+</ul>
+<h3 id="_39">暗骰<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h3>
+<p><font color=#53b0ff>暗中骰点</font></p>
+<ul>
+<li>rh 表达式</li>
+</ul>
+<p><font color=#53b0ff>暗中鉴定</font></p>
+<ul>
+<li>rah 技能名 技能值<font color=#53b0ff>(技能名/技能名可省略任意一样)</font></li>
+</ul>
+<h3 id="_40">随机分配身份<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h3>
+<ul>
+<li>who A B C D...</li>
+</ul>
+<p><font color=#53b0ff>可以随机打乱ABCD的顺序</font></p>
+<h3 id="_41">跑团名片修改<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>sn coc <font color=#53b0ff> 自动设置coc名片</font></p>
+</li>
+<li>
+<p>sn dnd <font color=#53b0ff> 自动设置dnd名片</font></p>
+</li>
+<li>
+<p>sn expr <font color=#53b0ff> 自设格式</font></p>
+</li>
+<li>
+<p>sn off <font color=#53b0ff> 取消自动设置</font></p>
+</li>
+<li>
+<p>sn set yyds <font color=#53b0ff> 修改群名片为yyds（其中yyds可以改成任何字符）</font></p>
+</li>
+<li>
+<p>sn on <font color=#53b0ff>打开自动设置</font></p>
+</li>
+</ul>
+<div class="admonition none">
+<p class="admonition-title">注意</p>
+<p>本设定针对人物卡，由你持有的人物卡确定是否自动改群名片，骰子必须是管理员才能使用。</p>
+</div>
+<p>其中模板格式为 {pc_技能名}</p>
+<h3 id="_42">默认骰面设定<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h3>
+<ul>
+<li>set 默认点数设置1d?的默认值 <font color=#53b0ff>如set 50则默认d=d50，只影响r指令</font></li>
+</ul>
+<h3 id="_43">牌堆功能<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h3>
+<ul>
+<li>draw 查看帮助</li>
+<li>
+<p>draw list <font color=#53b0ff>查看载入了哪些牌堆文件</font></p>
+</li>
+<li>
+<p>draw help <font color=#53b0ff>查看有哪些牌堆名可以使用</font></p>
+</li>
+<li>
+<p>draw reload <font color=#53b0ff>重新载入牌堆数据</font></p>
+</li>
+<li>
+<p>draw search <font color=#53b0ff>牌堆名关键词 搜索相关牌堆</font></p>
+</li>
+<li>
+<p>draw <font color=#53b0ff>牌堆名 进行牌堆抽取</font></p>
+</li>
+</ul>
+<div class="admonition none">
+<p class="admonition-title">注意</p>
+<p>可以使用 <strong>deck help</strong> 查看draw指令的扩展功能</p>
+</div>
+<p>以下指令可以设置默认牌堆，当 draw无牌堆名时将默认使用它。牌堆不会放回，抽完才会自动回满。</p>
+<ul>
+<li>
+<p>deck set 公共牌堆名 <font color=#53b0ff>设置默认牌堆，留空则清除默认牌堆名</font></p>
+</li>
+<li>
+<p>deck set 正整数1-100<font color=#53b0ff> 设置指定长度的数列</font></p>
+</li>
+<li>
+<p>deck show <font color=#53b0ff>查看剩余卡牌</font></p>
+</li>
+<li>
+<p>deck reset <font color=#53b0ff>重置剩余卡牌</font></p>
+</li>
+<li>
+<p>deck new 有弹|无弹|无弹|无弹|无弹|无弹 <font color=#53b0ff>自定义牌堆(用空格或I分割)</font></p>
+</li>
+</ul>
+<h3 id="ob">OB围观<a class="headerlink" href="#ob" title="Permanent link">&para;</a></h3>
+<h4 id="obexitlistclronoff">旁观模式:ob(exit/list/clr/on/off)<a class="headerlink" href="#obexitlistclronoff" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>ob <font color=#53b0ff>加入旁观可以看到他人暗骰结果</font></p>
+</li>
+<li>
+<p>ob extt<font color=#53b0ff>退出旁观模式</font></p>
+</li>
+<li>
+<p>ob list <font color=#53b0ff>查看群内旁观者</font></p>
+</li>
+<li>
+<p>ob clr <font color=#53b0ff>清除所有旁观者</font></p>
+</li>
+<li>
+<p>ob on <font color=#53b0ff>全群允许旁观模式</font></p>
+</li>
+<li>
+<p>ob off <font color=#53b0ff>&lt;禁用旁观模式</font></p>
+</li>
+</ul>
+<p><font color=#53b0ff>暗骰与旁观仅在群聊中有效</font></p>
+<h2 id="_44">【功能指令】<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h2>
+<h3 id="_45">退群<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h3>
+<ul>
+<li>dismiss 后四位QQ <font color=#53b0ff>令骰娘退群</font></li>
+</ul>
+<div class="admonition none">
+<p class="admonition-title">注意</p>
+<p>也可以使用@骰娘 .dismiss</p>
+</div>
+<h3 id="_46">跑团日志<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>log on [文件名?] <font color=#53b0ff>自定义文件名并开始</font></p>
+</li>
+<li>
+<p>log[文件名?] <font color=#53b0ff>自定义文件名并开始</font></p>
+</li>
+<li>
+<p>log end [文件名?]<font color=#53b0ff>结束并上传指定log</font></p>
+</li>
+<li>
+<p>log off/stop[文件名?] <font color=#53b0ff>暂停指定log</font></p>
+</li>
+<li>
+<p>log list <font color=#53b0ff>查看日志列表</font></p>
+</li>
+<li>
+<p>log clr <font color=#53b0ff>放弃所有日志(只能从骰主找回文件)</font></p>
+</li>
+</ul>
+<h3 id="_47">骰点统计<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h3>
+<ul>
+<li>hiy<font color=#53b0ff> 统计成功/失败等情况</font></li>
+</ul>
+<h3 id="_48">规则书速查<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h3>
+<ul>
+<li>rules [规则]:[待查词条]</li>
+</ul>
+<details class="none">
+<summary>例子</summary>
+<ul>
+<li>rules 跳跃</li>
+<li>rules CoC:大失败(coc默认视为coc7,dnd默认视为3r)</li>
+<li>rules dnd:语言</li>
+</ul>
+</details>
+<ul>
+<li>
+<p>rules set <font color=#53b0ff>规则 设置优先查询规则</font></p>
+</li>
+<li>
+<p>rules set <font color=#53b0ff>清除优先标记</font></p>
+</li>
+</ul>
+<details class="none">
+<summary>例子</summary>
+<ul>
+<li>rules set dnd 优先查询dnd</li>
+</ul>
+</details>
+<h3 id="master_2">获取master信息<a class="headerlink" href="#master_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>master <font color=#53b0ff>可以获取master预先设定的个人信息</font></li>
+</ul>
+<h3 id="_49">关于内核<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h3>
+<ul>
+<li>bot <font color=#53b0ff>读取内核版本号</font></li>
+</ul>
+<h3 id="_50">读取内核版本号<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h3>
+<ul>
+<li>send <font color=#53b0ff>正文内容发消息给骰主，如果骰主给骰娘设定了master列表的话。</font></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../function/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 基础功能">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                基础功能
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../load/" class="md-footer__link md-footer__link--next" aria-label="下一页: 文件载入">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                文件载入
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "content.code.copy", "navigation.top", "navigation.footer"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+    
+  </body>
+</html>
